@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "",
   "main": "lib/index.js",
+  "bin": {
+    "create-gql-server": "bin/create-gql-server"
+  },
   "scripts": {},
   "keywords": [],
   "author": "m@reaktivo.com",
@@ -10,6 +13,7 @@
   "dependencies": {
     "apollo-engine": "^1.1.2",
     "apollo-server-express": "^1.3.6",
+    "argsparser": "0.0.7",
     "compression": "^1.7.2",
     "dotenv": "^6.0.0",
     "express": "^4.16.3",

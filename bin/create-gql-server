@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+
+require("dotenv").config();
+const args = require("argsparser").parse();
+
+const createGqlServer = require("../lib/createGqlServer");
+const createSchema = require("../lib/createSchema");
+
+const port = process.env.PORT || 2000;
+const apiKey = process.env.APOLLO_ENGINE_API_KEY;
+
+module.exports = createGqlServer({
+  apiKey,
+  port,
+  schema: createSchema({
+    resolversPath:
+      args.resolversPath || args["resolvers-path"] || "./resolvers",
+    typesPath: args.typesPath || args["types-path"] || "./types.gql"
+  })
+}).then(() => {
+  console.log(`nano-graphql-server started listening on port ${port}`);
+});
