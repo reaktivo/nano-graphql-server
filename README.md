@@ -1,3 +1,7 @@
+# Note
+
+This project is not maintained anymore, you should switch to [Apollo v2](https://blog.apollographql.com/announcing-apollo-server-2-2b69fb4702ce)
+
 # [nano-graphql-server](https://github.com/reaktivo/nano-graphql-server)
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/reaktivo/nano-graphql-server/blob/master/LICENSE)
